@@ -1,0 +1,31 @@
+// Created on: 2024-10-19 20:08
+// Author: Safwan_Ibrahim
+
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+#define endl '\n'
+
+void solve()
+{
+    int n; cin >> n;
+    int mx = -1, mn = 1e9;
+    for (int i = 1; i <= n; i++) { 
+        int a; cin >> a;
+        mn = min(mn,a);
+        mx = max(mx,a);
+    }
+
+    n--;
+    cout << (1LL * mx * n) - (1LL * mn * n) << endl;
+}
+
+int32_t main()
+{
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    int t = 1; cin >> t;
+    while(t--) solve();
+    return 0;
+} 

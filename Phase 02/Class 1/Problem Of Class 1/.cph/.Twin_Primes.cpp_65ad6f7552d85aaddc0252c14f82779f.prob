@@ -1,0 +1,1 @@
+{"name":"Local: Twin_Primes","url":"/Users/All-Code/Phase 02/Class 1/Problem Of Class 1/Twin_Primes.cpp","tests":[{"id":1736142786512,"input":"1\n2\n3\n4","output":"(3, 5)\n(5, 7)\n(11, 13)\n(17, 19)"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/All-Code/Phase 02/Class 1/Problem Of Class 1/Twin_Primes.cpp","group":"local","local":true}
