@@ -1,4 +1,4 @@
-// Created on: 2025-01-14 09:31
+// Created on: 2025-01-14 11:08
 // Author: Safwan_Ibrahim
 
 #include <bits/stdc++.h>
@@ -8,8 +8,13 @@ using namespace std;
 #define endl '\n'
 
 void solve() {
-    
-    
+    int n, a, b; cin >> n >> a >> b;
+    if ((abs(a - b) - 1) % 2 == 1) {
+        cout << "YES\n";
+    }
+    else {
+        cout << "NO\n";
+    }
     
 }
 
