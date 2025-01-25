@@ -1,20 +1,34 @@
-// Created on: 2025-01-14 11:08
+// Created on: 2025-01-20 22:20
 // Author: Safwan_Ibrahim
 
 #include <bits/stdc++.h>
 using namespace std;
 
+const int N = 2e5 + 7;
+int n, m, b[N];
+
 #define ll long long
 #define endl '\n'
 
+bool check(map<int, int>&mp, int x) {
+    
+}
+
 void solve() {
-    int n, a, b; cin >> n >> a >> b;
-    if ((abs(a - b) - 1) % 2 == 1) {
-        cout << "YES\n";
+    cin >> n >> m;
+
+    map<int, int>mp;
+    for (int i = 1; i <= n; i++) {
+        int x; cin >> x;
+        mp[x]++;
     }
-    else {
-        cout << "NO\n";
+
+    for (int i = 1; i <= n; i++) {
+        cin >> b[i];
     }
+
+
+    
 }
 
 int32_t main() {
@@ -25,4 +39,4 @@ int32_t main() {
         solve();
     }
     return 0;
-}
+} 

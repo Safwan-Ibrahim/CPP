@@ -1,4 +1,4 @@
-// Created on: 2025-01-14 11:08
+// Created on: 2025-01-22 18:14
 // Author: Safwan_Ibrahim
 
 #include <bits/stdc++.h>
@@ -8,21 +8,20 @@ using namespace std;
 #define endl '\n'
 
 void solve() {
-    int n, a, b; cin >> n >> a >> b;
-    if ((abs(a - b) - 1) % 2 == 1) {
-        cout << "YES\n";
+    int L, R; cin >> L >> R;
+    if (R == 1 && L == 1) {
+        R++;
     }
-    else {
-        cout << "NO\n";
-    }
+    cout << R - L << endl;
+    
 }
 
 int32_t main() {
     ios_base::sync_with_stdio(0);cin.tie(0);
 
-    int t = 1; cin >> t;
-    for (int i = 1; i <= t; i++) {
+    int T = 1; cin >> T;
+    for (int i = 1; i <= T; i++) {
         solve();
     }
     return 0;
-}
+} 
