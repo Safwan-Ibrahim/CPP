@@ -1,0 +1,20 @@
+important note :
+if prime p, a % p != 0 
+
+then a ^ (p - 1) % p = 1;
+that means a ^ (p - 2) % p divides the next a then it becomes 1;
+that means a ^ (p - 2) diye gun kora mane (1 / a) diye gun kora mane a diye bhag kora 
+
+every a ^ (p - 1) % p = 1 right?
+taile a ^ n % p = a ^ (n % (p - 1)) % p; 
+
+if x >= m then x % m < x / 2 
+karon x is greater tar mane m jotobar pare katbe m er akare 
+suppose x = m * 2 then m divides x 2 times; suppose x = m * 2 - 1 then x ekbar kata porbe ar next bar kata porte aro 1 lagbe tar;
+so highest eta hobe parbe x / 2 - 1 mod korar por
+
+nCr = (n - 1)Cr + (n - 1)C(r - 1);
+proof :
+1,2,3,....,n - 1, n;
+n bade r ta jinish select korar way hocche (n - 1)Cr 
+ekn n shoho r ta jinish select korar way hocche (n - 1)C(r - 1); karon n newar por n ekta kombe ar r ekta kombe

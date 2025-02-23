@@ -1,32 +1,30 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-double func(double x) {
-	return 8 * x * x * x * x + 7 * x * x * x + 2 * x * x + 3 * x + 6;
-}
+int32_t main()
+{
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
 
-int main() {
-	int t; cin >> t;
+	int n;
+	cin >> n;
+	int a[n + 1];
+	for (int i = 1; i <= n; i++) {
+		cin >> a[i];
+	}
 
-	while(t--) {
-		double Y;
-		cin >> Y;
-		if (Y < (func(0)) || Y > (func(100))) {
-			cout << "No solution!\n";
-			continue;
+	for (int i = 2; i <= n; i++) {
+		int key = a[i];
+		int j = i - 1;
+		while (j >= 1 && a[j] > key) {
+			a[j + 1] = a[j];
+			j--;
 		}
-
-		double l = 0, r = 100;
-    int iterations = 60;
-		while (iterations--) {
-			double mid = (l + r) / 2;
-			if (func(mid) >= Y) {
-				r = mid;
-			} else {
-				l = mid;
-      }
-		}
-		cout << fixed << setprecision(4) << l << "\n";
+		a[j + 1] = key;
+	}
+	
+	for (int i = 1; i <= n; i++) {
+		cout << a[i] << ' ';
 	}
 
 	return 0;

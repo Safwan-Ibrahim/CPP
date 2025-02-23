@@ -73,6 +73,6 @@ int32_t main() {
             cout << T.query(1, 1, n, i, j) << endl; 
         }
     }
-    
+
     return 0;
 } 

@@ -5,7 +5,7 @@ using namespace std;
 #define endl '\n'
 
 const int N = 1e5+9;
-vector<int>add[N],rem[N];
+vector<int>Add[N],Rem[N];
 
 int32_t main()
 {   
@@ -16,17 +16,17 @@ int32_t main()
 
     for (int i = 1; i <= q; i++) {
         int l,r,x; cin >> l >> r >> x;
-        add[l].push_back(x);
-        rem[r+1].push_back(x);
+        Add[l].push_back(x);
+        Rem[r + 1].push_back(x);
     }
 
     map<int,int>mp;
     for (int i = 1; i <= n; i++) {
-        for (auto x : add[i]) {
+        for (auto x : Add[i]) {
             mp[x]++;
         }
 
-        for (auto x : rem[i]) {
+        for (auto x : Rem[i]) {
             mp[x]--;
             if (mp[x] == 0) {
                 mp.erase(x);

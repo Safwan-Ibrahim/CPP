@@ -7,8 +7,7 @@ using namespace std;
 const int N = 1e6+7;
 int arr[N];
 
-vector<int> merge(vector<int>&l, vector<int>&r) 
-{
+vector<int> merge(vector<int>&l, vector<int>&r) {
     vector<int>v;
     int p1 = 0, p2 = 0;
     for (int i = 1; i <= l.size()+r.size(); i++) {
@@ -38,10 +37,10 @@ vector<int> merge_sort(int l, int r) {
     return merge(L,R);
 }
 
-int32_t main()
-{   
+int32_t main() {   
     ios_base::sync_with_stdio(0);
     cin.tie(0);
+    
     int n; cin >> n;
     for (int i = 0; i < n; i++) {
         cin >> arr[i];

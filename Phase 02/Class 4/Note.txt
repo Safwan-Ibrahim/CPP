@@ -1,0 +1,14 @@
+1. Simple graph e no self loop and no multiple edge 
+    mutliple edge holo jokhon ami same information duibar dicchi
+2. Dense graph e onek gulu edge thake
+3. Spars graph e kom edge thake
+4. Simple path holo jokhon kuno path 2 bar visit kortesi na
+5. Ekta node er koyta connected node ase eita ke degree bole
+    outdegree hocche koyta baire gese
+    indegree hocche koyta dhukse bhitre
+6. Handshaking lemma is jader number of degree odd tara even sonkhok ase
+
+7. ekta node jodi ekbar use kora hoy tahole take simple cycle bole
+8. directed graph e node 1 theke 2 and 2 theke abr 1 e asha gele eitao ekta cycle but undirected graph 1 to 2 kuno cycle na
+
+9. tree hocche connected but cyclic na. always n - 1 ta edge thakbe

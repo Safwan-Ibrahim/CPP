@@ -5,30 +5,27 @@ using namespace std;
 #define endl '\n'
 
 const int N = 1e5+9;
-int arr[N];
+int A[N];
 
-int32_t main()
-{   
+int32_t main() {   
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
     int n; ll s; cin >> n >> s;
-
     for (int i = 1; i <= n; i++) { 
-        cin >> arr[i]; 
+        cin >> A[i]; 
     }
 
-    int r = 1, ans = 0;
     ll sum = 0;
-
+    int r = 1;
+    int ans = 0;
     for (int l = 1; l <= n; l++) {
-        sum += arr[r++];
-        if (sum <= s && r <= n) {
-            ans = max(ans,r-l); // r = 3 and l = 1, ans would be (3-1)+1 = 3 but we already increased by one 
+        while(r <= n && A[r] + sum <= s) {
+            sum += A[r];
+            r++;
         }
-        else {
-            sum -= arr[l];
-        }
+        ans = max(ans, r - l); 
+        sum -= A[l];
     }
 
     cout << ans << endl;

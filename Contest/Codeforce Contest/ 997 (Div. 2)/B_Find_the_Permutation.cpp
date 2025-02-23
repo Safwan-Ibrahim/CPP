@@ -7,43 +7,50 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-void solve() {
-    int n; cin >> n;
+const int N = 1005;
+char A[N][N];
+int n, Ans[N];
+
+void Solve(vector<int>B, int l, int r) {
+    if (l > r) {
+        return;
+    }
+    int cnt = 0;
+    vector<int>L, R;
+    int mn = B.front();
+    for (int i = 1; i < B.size(); i++) {
+        if (A[mn][B[i]] == '1') {
+            cnt++;
+            R.push_back(B[i]);
+        }
+        else {
+            L.push_back(B[i]);
+        }
+    }
+
+    Ans[r - cnt] = mn;
+    Solve(R, r - cnt + 1, r);
+    Solve(L, l, r - cnt - 1);
+} 
+
+void Try() {
+    cin >> n;
     
-    char a[n + 1][n + 7];
-    set<int>done;
+    vector<int>B;
     for (int i = 1; i <= n; i++) {
-        done.insert(i);
         for (int j = 1; j <= n; j++) {
-            cin >> a[i][j];
+            cin >> A[i][j];
         }
+        B.push_back(i);
     }
 
-    deque<int>dq;
-    for (int i = 1; i <= n - 1; i++) {
-        for (int j = i + 1; j <= n; j++) {
-            if (a[i][j] == '1') {
-                if (done.find(i) != done.end()) {
-                    dq.push_front(i);
-                    done.erase(i);
-                }
-                if (done.find(j) != done.end()) {
-                    dq.push_back(j);
-                    done.erase(j);
-                }
-            }
-        }
-    }
-
-    for (auto x : done) {
-        dq.push_front(x);
-    }
-
-    for (auto x : dq) {
-        cout << x << " ";
+    memset(Ans, 0, n * 4);
+    Solve(B, 1, n);
+    
+    for (int i = 1; i <= n; i++) {
+        cout << Ans[i] << " ";
     }
     cout << endl;
-    
 }
 
 int32_t main() {
@@ -51,7 +58,7 @@ int32_t main() {
 
     int t = 1; cin >> t;
     for (int i = 1; i <= t; i++) {
-        solve();
+        Try();
     }
     return 0;
 } 

@@ -7,8 +7,7 @@ using namespace std;
 const int N = 1e6 + 9;
 bool gone[N];
  
-int32_t main()
-{   
+int32_t main() {   
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
@@ -29,6 +28,5 @@ int32_t main()
     }
 
     cout << primes.size() << endl;
-    
     return 0;
 } 

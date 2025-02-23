@@ -1,0 +1,12 @@
+divisible by 3 when sum of its digit is divisible by the 3
+divisible by 9 when sum of its digit is divisible by the 9
+divisible by 4 if last two digit is divisible by 4
+divisible 6 if it is divisible by 3 and 2
+divisible by 11 when last er ta positive and er ager ta negative eibhabe total digit sum jodi 11 diye bhag jay
+
+lengres formula : n fact e koyta 3 ase is n / 3 + n / 3^2 + n / 3^3 eigular sum // 3 is just an example
+fact er prime fact korlei fact er divisors gula pawa jay
+
+number of odd divisors : prime fact kore 2 bad diye joyta divisors banano jay
+
+goldbach's conjecture : every even number k 2 ta prime er sum e show kora jay // odd hole ei number theke 2 bad diye jodi prime hoy tahole ei odd keo 2 ta prime er sum e show kora jay ar tao na hole 3 ta prime er sum e 

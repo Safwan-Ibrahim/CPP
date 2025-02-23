@@ -12,11 +12,11 @@ int32_t main()
     int x = 10;
 
     auto sum = [] (int a, int b) -> int { // we can access local variable by using lamda funtion
-        return a+b;
+        return a + b;
     };
 
     auto get_sum = [=] (int a) -> int { // = means read only mood. so we cant change the value
-        return a+x;
+        return a + x;
     };
 
     auto get_plus = [&] () -> int {  // & means capture by reference 

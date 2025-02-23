@@ -1,0 +1,8 @@
+euclid lemma : if a prime p divides x * y then p divides  least x or y or both
+number of divisors rough e calculate hocche 3root n 
+you will get a prime in every 1000 rough is 1 / ln(n)
+
+euclid algorithm : let a >= b; then gcd(a, b) = gcd(a - b, b);
+then we can say gcd(a, b) = gcd(a % b, b); if a >= b;
+
+

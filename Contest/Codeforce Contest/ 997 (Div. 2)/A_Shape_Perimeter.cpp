@@ -7,7 +7,7 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-void solve() {
+void Try() {
     int n, m; cin >> n >> m;
     int a[n + 1], b[n + 1];
     int corx = 0, cory = 0;
@@ -33,7 +33,7 @@ int32_t main() {
 
     int t = 1; cin >> t;
     for (int i = 1; i <= t; i++) {
-        solve();
+        Try();
     }
     return 0;
 } 
