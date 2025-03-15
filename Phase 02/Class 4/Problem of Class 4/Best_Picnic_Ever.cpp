@@ -9,7 +9,7 @@ using namespace std;
 
 const int N = 1005;
 vector<int> G[N]; // remember to clear in every try
-vector<bool> H(N, true), Vs(N, false); // // remember to clear in every try
+vector<bool> H(N, true), Vs(N, false); // remember to clear in every try
 
 void dfs(int u) {
     Vs[u] = true;

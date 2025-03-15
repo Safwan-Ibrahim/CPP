@@ -9,17 +9,18 @@ using namespace std;
 
 const int N = 105;
 vector<int> G[N]; // better graph
-bool Vs[N], ok, Black[N];   // if Black == false, then it is white
+bool Vs[N], ok;
+int C[N];
 
 void dfs(int u) {
     Vs[u] = true;
     for (auto x : G[u]) {
         if (!Vs[x]) {
-            Black[x] = Black[u] ^ 1;
+            C[x] = C[u] ^ 1;
             dfs(x);
         }
         else {
-            if (Black[x] ^ Black[u]) { // black and white
+            if (C[x] == C[u]) { 
                 ok = false;
             }
         }
@@ -44,7 +45,6 @@ int32_t main() {
     //     }
     // }
 
-    cout << boolalpha << ok << endl;
 
     return 0;
 } 

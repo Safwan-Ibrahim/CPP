@@ -1,47 +1,45 @@
-// Created on: 2025-02-12 17:32
+// Created on: 2025-02-21 06:44
 // Author: Safwan_Ibrahim
     
 #include <bits/stdc++.h>
 using namespace std;
 
+const int N = 1e3 + 8;
+vector<int> G[N];
+int Indeg[N];
+
 #define ll long long
 #define endl '\n'
-
-const int N = 1e5 + 9;
-vector<int> G[N];
-int In[N];
-bool Vs[N];
 
 int32_t main() {
     ios_base::sync_with_stdio(0);cin.tie(0);
     
-    int n, m; cin >> n >> m;
-    while(m--) {
+    int n, m; cin >> n >> m; 
+    for (int i = 1; i <= m; i++) {
         int u, v; cin >> u >> v;
         G[u].push_back(v);
-        In[v]++;
+        Indeg[v]++;
     }
 
-    vector<int>Ans;
-    vector<int>Z;
+    vector<int>Ans, Zero;
     for (int i = 1; i <= n; i++) {
-        if (In[i] == 0) {
-            Z.push_back(i);;
+        if (Indeg[i] == 0) {
+            Zero.push_back(i);
         }
     }
-
     while(Ans.size() < n) {
-        if (Z.empty()) {
+        if (Zero.empty()) {
             cout << "Impossible\n"; return 0;
         }
-        int cur = Z.back(); 
-        Z.pop_back();
+        
+        int cur = Zero.back();
+        Zero.pop_back();
 
         Ans.push_back(cur);
-        for (auto x : G[cur]) {
-            In[x]--;
-            if (In[x] == 0) {
-                Z.push_back(x);
+        for (auto v : G[cur]) {
+            Indeg[v]--;
+            if (Indeg[v] == 0) {
+                Zero.push_back(v);
             }
         }
     }
