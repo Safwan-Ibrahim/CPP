@@ -1,56 +1,39 @@
-// Created on: 2025-02-21 06:44
+// Created on: 2025-03-16 00:39
 // Author: Safwan_Ibrahim
     
 #include <bits/stdc++.h>
 using namespace std;
 
-const int N = 1e3 + 8;
-vector<int> G[N];
-int Indeg[N];
-bool Vs[N];
-
 #define ll long long
 #define endl '\n'
+
+struct det {
+    int mx, mn;
+};
+
+int A[1003];
+int n;
+
+det min_mx() {
+    det a;
+    a.mn = 1e9, a.mx = 0;
+    for (int i = 1; i <= n; i++) {
+        a.mn = min(a.mn, A[i]);
+        a.mx = max(a.mx, A[i]);
+    }
+    return a;
+}
 
 int32_t main() {
     ios_base::sync_with_stdio(0);cin.tie(0);
     
-    int n, m; cin >> n >> m;
-    for (int i = 1; i <= m; i++) {
-        int u, v; cin >> u >> v;
-        G[u].push_back(v);
-        Indeg[v]++;
-    }
-
-    vector<int>Ans, Zero;
+    cin >> n;
     for (int i = 1; i <= n; i++) {
-        if (Indeg[i] == 0) {
-            Vs[i] = true;
-            Zero.push_back(i);
-        }
-    }
-    while(Ans.size() < n) {
-        if (Zero.empty()) {
-            cout << "Impossible\n"; return 0;
-        }
-
-        int cur = Zero.back();
-        Zero.pop_back();
-
-        Ans.push_back(cur);
-        for (auto v : G[cur]) {
-            Indeg[v]--;
-            if (!Vs[v] && Indeg[v] == 0) {
-                Vs[v] = true;
-                Zero.push_back(v);
-            }
-        }
+        cin >> A[i];
     }
 
-    for (auto x : Ans) {
-        cout << x << " ";
-    }
-    cout << endl;
+    det ans = min_mx();
+    cout << ans.mn << " " << ans.mx << endl;
     
     return 0;
 } 

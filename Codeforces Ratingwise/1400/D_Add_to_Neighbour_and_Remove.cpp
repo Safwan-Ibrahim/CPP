@@ -12,33 +12,27 @@ int A[N];
 
 void Try() {
     int n; cin >> n;
-    int mx = -1;
     for (int i = 1; i <= n; i++) {
         cin >> A[i];
-        mx = max(mx, A[i]);
     }
     
-    int lo = A[1];
-    int k = 2;
-    while(1) {
-        int sum = 0;
+    int target = A[1], id = 2;
+    while(true) {
+        int sum = 0, cnt = 0;
         bool pos = true;
-        int cnt = 0;
         for (int i = 1; i <= n; i++) {
             sum += A[i];
-            if (sum == lo) {
-                sum = 0;
-                cnt++;
+            if (sum == target) {
+                sum = 0; cnt++;
             }
-            else if (sum > lo || i == n) {
-                pos = false;
-                break;
+            else if (sum > target || i == n) {
+                pos = false; break;
             }
         }
         if (pos) {
             cout << n - cnt << endl; return;
         }
-        lo += A[k++];
+        target += A[id++];
     }
     
 }
