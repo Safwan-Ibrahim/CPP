@@ -8,70 +8,31 @@ using namespace std;
 #define endl '\n'
 
 void Try() {
-    int n; cin >> n;
-    n *= 2;
+    int n; cin >> n; n *= 2;
     int A[n + 5];
     for (int i = 1; i <= n; i++) {
         cin >> A[i];
     }
     
     sort(A + 1, A + n + 1);
-    ll sum1 = 0, sum2 = 0;
-    set<int>Have;
-    set<int>F, S;
+    vector<ll>E, O;
+    ll dif = 0;
     for (int i = 1; i <= n; i++) {
-        if (i <= n / 2) {
-            sum1 += A[i];
-            F.insert(A[i]);
+        if (i <= (n - 2) / 2) {
+            E.push_back(A[i]);
+            dif -= A[i];
         }
         else {
-            sum2 += A[i];
-            S.insert(A[i]);
-        }
-        Have.insert(A[i]);
-
-    }
-
-    ll ans = sum2 - sum1;
-    for (int i = n; i >= 1; i--) {
-        if (i <= n / 2) {
-            ans += A[i];
-            ll need = A[i] + ans;
-            if (need > 0 && Have.find(need) == Have.end()) {
-                cout << A[i] << " ";
-                auto it1 = S.begin();
-                auto it2 = F.begin();
-                F.erase(A[i]);
-                F.insert(need);
-                for (int i = 1; i <= n / 2; i++) {
-                    cout << *it1++ << " ";
-                    cout << *it2++ << " ";
-                }
-                cout << endl;
-                return;
-            }
-
-        }
-        else {
-            ans -= A[i];
-            ll need = A[i] - ans;
-            if (need > 0 && Have.find(need) == Have.end()) {
-                cout << A[i] << " ";
-                auto it1 = S.begin();
-                auto it2 = F.begin();
-                S.erase(A[i]);
-                S.insert(need);
-                for (int i = 1; i <= n / 2; i++) {
-                    cout << *it1++ << " ";
-                    cout << *it2++ << " ";
-                }
-                cout << endl;
-                return;
-            }
-            ans += A[i];
+            O.push_back(A[i]);
+            dif += A[i];
         }
     }
+    E.push_back(dif);
 
+    for (int i = 0; i < min(E.size(), O.size()); i++) {
+        cout << O[i] << " " << E[i] << " ";
+    }
+    cout << O.back() << endl;
 }
 
 int32_t main() {
