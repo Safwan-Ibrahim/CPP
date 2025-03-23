@@ -1,4 +1,4 @@
-// Created on: 2025-03-11 22:18
+// Created on: 2025-03-23 11:41
 // Author: Safwan_Ibrahim
 
 #include <bits/stdc++.h>
@@ -7,22 +7,18 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 2e5 + 8;
-int P[N], R[N];
-
 void Try() {
-    int n, m; cin >> n >> m;
-    for (int i = 1; i <= n; i++) {
-        cin >> P[i];
-    }   
-    for (int i = 1; i <= n; i++) {
-        cin >> R[i];
+    int x, y, a; cin >> x >> y >> a;
+    int sum = x + y;
+    int k = a / sum;
+    a -= k * sum;
+    if (a < x) {
+        cout << "NO\n";
     }
-
-    vector<pair<int, int>>A;
-
-    sort(A.begin(), A.end());
-
+    else {
+        cout << "YES\n";
+    }
+    
     
 }
 

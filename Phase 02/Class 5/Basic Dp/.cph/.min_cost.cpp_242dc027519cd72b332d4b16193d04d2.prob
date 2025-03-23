@@ -1,0 +1,1 @@
+{"name":"Local: min_cost","url":"/Users/safwan/Documents/CPP/Phase 02/Class 5/Basic Dp/min_cost.cpp","tests":[{"id":1742634383963,"input":"3 3\n1 2 3\n8 1 1 \n1 9 2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/safwan/Documents/CPP/Phase 02/Class 5/Basic Dp/min_cost.cpp","group":"local","local":true}

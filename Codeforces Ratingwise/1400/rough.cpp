@@ -1,18 +1,1 @@
-// Created on: 2025-03-07 23:15
-// Author: Safwan_Ibrahim
-    
-#include <bits/stdc++.h>
-using namespace std;
-
-#define ll long long
-#define endl '\n'
-
-int32_t main() {
-    ios_base::sync_with_stdio(0);cin.tie(0);
-    
-    string S = "";
-    S += "a";
-    cout << S << endl;
-    
-    return 0;
-} 
+#include<bits/stdc++.h>using namespace std;;int main(){ios_base::sync_with_stdio(0);cin.tie(0);int n;cin>>n;vector<int>A(n+1);for(int i=1;i<=n;i++)cin>>A[i];for(int i=1,x;i<=n;i++)cin>>x,A[i]-=x;sort(A.begin()+1,A.end());ll ans=0;for(int i=1;i<=n;i++)ans+=A.end()-upper_bound(A.begin()+i+1,A.end(),-A[i]);cout<<ans<<'\n';}

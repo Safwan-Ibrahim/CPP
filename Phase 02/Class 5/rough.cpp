@@ -1,6 +1,6 @@
-// Created on: 2025-03-17 00:30
+// Created on: 2025-03-23 22:57
 // Author: Safwan_Ibrahim
-    
+  
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -8,9 +8,9 @@ using namespace std;
 #define endl '\n'
 
 int32_t main() {
-    ios_base::sync_with_stdio(0);cin.tie(0);
-    
-    cout << (-0 == 0);
-    
-    return 0;
+  ios_base::sync_with_stdio(0);cin.tie(0);
+  
+  
+  
+  return 0;
 } 
