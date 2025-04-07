@@ -10,7 +10,7 @@ using namespace std;
 const int N = 55, M = 100000007;
 int n, target, A[N], C[N], Ans[N][10005];
 
-int ways(int id, int sum) {
+int way(int id, int sum) {
     if (id == n + 1) {
         if (sum == target) {
             return 1;
@@ -24,7 +24,7 @@ int ways(int id, int sum) {
     for (int i = 0; i <= C[id]; i++) {
         int next = sum + A[id] * i;
         if (next <= target) {
-            ans += ways(id + 1, next);
+            ans += way(id + 1, next);
             ans %= M;
         }
         else {
@@ -34,7 +34,7 @@ int ways(int id, int sum) {
     return Ans[id][sum] = ans;
 }
 
-int ways_it() {
+int way_it() {
     vector<vector<int>>Ways(n + 2, vector<int>(target + 2, 0));
     Ways[n + 1][target] = 1;
     for (int i = n; i >= 1; i--) {
@@ -67,7 +67,7 @@ void Try() {
 
     // memset(Ans, -1, sizeof Ans);
     // cout << ways(1, 0) << endl;
-    cout << ways_it() << endl;
+    cout << way_it() << endl;
     
 }
 
