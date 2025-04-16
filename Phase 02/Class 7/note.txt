@@ -1,0 +1,4 @@
+n length er array te duniar jekuno value e ashuk na keno at least ekta subset ase ja n diye divisible 
+how ? why ? think A[i] % n;
+not only subset !! even sumarray ! exists that is divisible by n
+prefix sum 1 theke n - 1 porjonto jekuno ekta 2 bar ashlei n diye divisible or 0 ekta ashlei n diye divisible
