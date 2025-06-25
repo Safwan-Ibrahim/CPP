@@ -16,7 +16,7 @@ void rec(int pos)  // for every base case (or for every return) it will print su
             }
         }
         cout << endl;   
-    return;
+        return;
     }
     
     is_taken[pos] = false;

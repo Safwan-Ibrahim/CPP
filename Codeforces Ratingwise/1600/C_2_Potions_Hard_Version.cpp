@@ -8,20 +8,20 @@ using namespace std;
 #define endl '\n'
 
 const int N = 200008; // rem to change
-int n, A[N];
+int pn, A[N];
 
 int32_t main() {
     ios_base::sync_with_stdio(0);cin.tie(0);
     
-    cin >> n;
-    for (int i = 1; i <= n; i++) {
+    cin >> pn;
+    for (int i = 1; i <= pn; i++) {
         cin >> A[i];
     }
 
     ll health = 0;
     int ans = 0;
     priority_queue<int>Pq;
-    for (int i = 1; i <= n; i++) {
+    for (int i = 1; i <= pn; i++) {
         if (A[i] >= 0) {
             ans++;
             health += A[i];

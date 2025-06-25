@@ -1,0 +1,14 @@
+1.  n = 5 and k = 3 that means k length er koyta different array niye sum n kora jay
+    A[i] >= 0;
+    we will use star and bars 
+    5 = 1 + 1 + 1 + 1 + 1 we need to divide these in three part
+    *****|| put the bars anywhere and sum will be 5;
+    that means n + k - 1 fact / (n fact * k - 1 fact)
+
+2.  permutation with repeatation is = n ! / same value size factorial1 * same value size factorial2 
+
+3.  grid walking : 0,0 theke 2,3 te utar way koyta? 
+    exactly 2 ta up and 3 ta right mane uurrr . er permutation koyta? 3 + 2 fact ar repeatation diye divide
+    mane (5!) / (3! * 2!);
+
+4.  binomial theorem : (a + b)^n = Σ (from k = 0 to n) [ C(n, k) * a^(n - k) * b^k ]

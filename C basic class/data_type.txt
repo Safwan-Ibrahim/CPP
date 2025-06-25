@@ -1,0 +1,10 @@
+int, float, char
+
+int - %d, 
+float - %f, 
+char - %c
+
+printf ("") always "" and (); aftere every line we must use semi colon;
+\n prints newline 
+
+for every format specifier use must use the data after the semi colon & comma
