@@ -9,11 +9,6 @@ using namespace std;
 
 int32_t main() {
     ios_base::sync_with_stdio(0);cin.tie(0);
-
-    int st, en; cin >> st >> en;
-    for (int i = st; i <= en; i++) {
-        cout << 1LL * (ll) (1e9 - 1) * i << endl;
-    }
     
     return 0;
 } 
