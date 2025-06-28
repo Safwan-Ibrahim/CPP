@@ -19,18 +19,26 @@ int32_t main() {
         cin >> A[i];
     }
 
+    int cnt = 0;
     for (int i = 1; i <= n - 1; i++) {
-        int mn =  INT_MAX, id = -1;
+        int mn =  2e9, id = -1; // boro value
         for (int j = i ; j <= n; j++) {
             if (mn > A[j]) {
                 mn = A[j];
                 id = j;
             }
         }
-        swap(A[i], A[id]);
+        if (A[id] != A[i]) {
+            swap(A[i], A[id]);
+            cnt++;
+        }
     }
 
-    cout << is_sorted(A + 1, A + n + 1);
-
+    for (int i = 1; i <= n; i++) {
+        cout << A[i] << " ";
+    }
+    cout << endl;
+    cout << cnt;
+    cout << endl;
     return 0;
 } 
