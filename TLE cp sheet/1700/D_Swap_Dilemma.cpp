@@ -39,7 +39,6 @@ void Try() {
             swap(B[i], B[Id[B[i]]]);
         }
     }
-
     cout << (yes ? "YES\n" : "NO\n");
 
 }
