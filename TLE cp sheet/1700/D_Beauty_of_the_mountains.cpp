@@ -43,7 +43,6 @@ void Try() {
             gcd_ = gcd(gcd_, abs(2 * one - k * k));
         }
     }
-
     if (gcd_ != 0 && sum % gcd_ == 0 || sum == 0) {
         cout << "YES\n";
     }

@@ -4,32 +4,56 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 1e7 + 9;
-int spf[N];
+const int nn = 1e6 + 9;
 
-int32_t main()
-{   
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
-    for (int i = 1; i < N; i++) {
-        spf[i] = i;
-    }
+int Sp[nn];
+vector<int>Prime;
+vector<bool>Gone(nn, false);
+vector<int> Pf[nn];
 
-    for (int i = 2; i < N; i++) {
-        for (int j = i; j < N; j += i) {
-            spf[j] = min(spf[j], i);
+void prec() {
+    for (int i = 2; i * i < nn - 2; i++) {
+        if (!Gone[i]) {
+            for (int j = i * i; j < nn - 2; j += i) {
+                Gone[j] = true;
+            }
         }
     }
+
+    for (int i = 2; i < nn - 2; i++) {
+        if (!Gone[i]) {
+            Prime.push_back(i);
+        }
+    }
+
+    for (int i = 1; i < nn - 2; i++) {
+        Sp[i] = i;
+    }
+    for (int i = 2; i * i < nn - 2; i++) {
+        if (Sp[i] == i) {
+            for (int j = i * i; j < nn - 2; j += i) {
+                Sp[j] = min(Sp[j], i);
+            }
+        }
+    }
+
+    for (int i = 2; i < nn - 2; i++) {
+        int n = i;
+        while(n > 1) {
+            Pf[i].push_back(Sp[n]);
+            n /= Sp[n];
+        }
+    }
+}
+
+int32_t main() {   
+    ios_base::sync_with_stdio(0);
+    prec();
 
     int q; cin >> q;
     while(q--) {
         int n; cin >> n;
-        vector<int>ans;
-        while(n > 1) {
-            ans.push_back(spf[n]);
-            n /= spf[n];
-        }
-        for (auto x : ans) {
+        for (auto x : Pf[n]) {
             cout << x << " ";
         }
         cout << endl;

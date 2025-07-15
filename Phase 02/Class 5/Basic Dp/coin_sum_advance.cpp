@@ -47,7 +47,6 @@ int32_t main() {
     }
 
     cout << count(n) << endl;
-    cout << better_ways_to_count(n) << endl;
         
     return 0;
 } 

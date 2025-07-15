@@ -16,7 +16,7 @@ int32_t main() {
     for (int i = 1; i <= n; i++) {
         cin >> A[i];
     }
-    
+
     int ans = 0;
     for (int k = 0; k < 30; k++) {
         int odd_cnt = 0, even_cnt = 1, total_odd = 0, total_even = 0, x = 0;
