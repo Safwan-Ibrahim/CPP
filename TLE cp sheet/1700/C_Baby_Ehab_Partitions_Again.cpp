@@ -41,7 +41,7 @@ int32_t main() {
         cout << 0 << endl; return 0;
     }
 
-    for (int i = 2; ;i *= 2) {
+    for (int i = 2; i <= 20000;i *= 2) {
         for (int j = 1; j <= n; j++) {
             if (A[j] % i) {
                 reset();
