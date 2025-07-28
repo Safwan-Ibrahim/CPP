@@ -20,7 +20,6 @@ void prec() {
             }
         }
     }
-
     for (int i = 2; i < nn; i++) {
         if (!gone[i]) {
             prm.push_back(i);

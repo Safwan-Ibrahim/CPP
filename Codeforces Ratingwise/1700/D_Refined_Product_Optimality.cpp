@@ -46,7 +46,7 @@ void Try() {
 
     cout << ans << " ";
     int ty, id;
-    while(q--) {
+    for (int _ = 1; _ <= q; _++) {
         cin >> ty >> id;
         int last_id;
         if (ty == 1) {
