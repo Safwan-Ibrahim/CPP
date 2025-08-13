@@ -7,9 +7,9 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 1008, M = 1e9 + 7;
-int n, Ans[N][N];
-char A[N][N];
+const int nn = 1008, M = 1e9 + 7;
+int n, Ans[nn][nn];
+char A[nn][nn];
 
 int total_path(int i, int j) {
     if (A[i][j] == '*') {

@@ -7,9 +7,9 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 3e3 + 8;
+const int nn = 3e3 + 8;
 string S, T;
-int Ans[N][N];
+int Ans[nn][nn];
 
 int lcs(int i, int j) {
     if (i == S.size() || j == T.size()) {

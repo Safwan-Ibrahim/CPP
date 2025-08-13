@@ -7,13 +7,13 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 1e5 + 7;
+const int nn = 1e5 + 7;
 
 struct STL {
     #define lc (node << 1)
     #define rc ((node << 1) + 1)
-    int lazy[4 * N];
-    array<int, 5> T[N * 4];
+    int lazy[4 * nn];
+    array<int, 5> T[nn * 4];
 
     inline void push(int node, int b, int e) { // change this
         if (lazy[node] == 0)

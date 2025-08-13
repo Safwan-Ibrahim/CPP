@@ -7,15 +7,15 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 1e5 + 9;
-int A[N];
+const int nn = 1e5 + 9;
+int A[nn];
 
 struct mp {
     int left_value, right_value, left_count, right_count, mx_count;
 };
 
 struct ST {
-    mp T[4 * N];
+    mp T[4 * nn];
     static const int inf = -1e9;
 
     mp merge(mp l, mp r) {

@@ -8,8 +8,8 @@ using namespace std;
 #define endl '\n'
 
 string S, T, U;
-const int N = 55;
-int Ans[N][N][N];
+const int nn = 55;
+int Ans[nn][nn][nn];
 
 int lcs(int i, int j, int k) {
     if (i == S.size() || j == T.size() || k == U.size()) {

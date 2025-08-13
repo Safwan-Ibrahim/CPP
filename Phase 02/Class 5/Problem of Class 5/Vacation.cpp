@@ -7,8 +7,8 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 1e5 + 8;
-int n, A[3][N], Ans[4][N];
+const int nn = 1e5 + 8;
+int n, A[3][nn], Ans[4][nn];
 
 int max_happy(int i, int last) {
     if (i == n + 1) {

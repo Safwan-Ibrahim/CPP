@@ -7,8 +7,8 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 1e5 + 8;
-int A[N], Min_cost[N];
+const int nn = 1e5 + 8;
+int A[nn], Min_cost[nn];
 
 int32_t main() {
     ios_base::sync_with_stdio(0);cin.tie(0);

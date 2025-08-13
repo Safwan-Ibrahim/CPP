@@ -7,9 +7,9 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 5e3 + 8, inf = 1e9;
+const int nn = 5e3 + 8, inf = 1e9;
 string S, T;
-int Ans[N][N];
+int Ans[nn][nn];
 
 int min_op(int i, int j) {
     if (i == S.size()) {

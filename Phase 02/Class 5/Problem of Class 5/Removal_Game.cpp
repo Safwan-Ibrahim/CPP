@@ -7,10 +7,10 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 5e3 + 8;
-int n, A[N];
-ll Ans[2][N][N];
-bool Vs[2][N][N];
+const int nn = 5e3 + 8;
+int n, A[nn];
+ll Ans[2][nn][nn];
+bool Vs[2][nn][nn];
 
 ll dif(int i, int j, bool last_a) {
     if (i > j) {

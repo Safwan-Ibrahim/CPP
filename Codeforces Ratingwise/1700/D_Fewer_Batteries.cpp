@@ -46,7 +46,6 @@ void Try() {
     }
 
     cout << ans << endl;
-    
     for (int i = 1; i <= n; i++) {
         G[i].clear();
     }

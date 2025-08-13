@@ -8,9 +8,9 @@ using namespace std;
 #define endl '\n'
 
 string S, T;
-const int N = 105;
-string Ans[N][N];
-bool Vs[N][N];
+const int nn = 105;
+string Ans[nn][nn];
+bool Vs[nn][nn];
 
 string lcs(int i, int j) {
     if (i == S.size() || j == T.size()) {

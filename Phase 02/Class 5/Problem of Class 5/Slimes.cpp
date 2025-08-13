@@ -7,9 +7,9 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 405;
+const int nn = 405;
 int n;
-ll Pref[N], Ans[N][N];
+ll Pref[nn], Ans[nn][nn];
 const ll inf = 1e18 + 9;
 
 ll min_cost(int l, int r) {

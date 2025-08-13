@@ -25,7 +25,7 @@ int32_t main() {
     Vs[1] = 1;
     queue<int>Q;
     Q.push(1);
-
+    vector<int>Dis(n + 1, 0);
     while(!Q.empty()) {
         int u = Q.front();
         Q.pop(); 

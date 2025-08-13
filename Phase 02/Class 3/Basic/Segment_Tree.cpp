@@ -7,9 +7,9 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 1e5 + 7;
-int A[N], n;
-ll T[4 * N];
+const int nn = 1e5 + 7;
+int A[nn], n;
+ll T[4 * nn];
 
 void build(int node, int b, int e) {
     if (b == e) {

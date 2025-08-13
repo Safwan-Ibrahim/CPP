@@ -1,11 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-const int N = 3e5 + 9;
-int A[N];
+const int nn = 3e5 + 9;
+int A[nn];
 
 struct ST {
-    int T[4 * N];
+    int T[4 * nn];
     static const int inf = 1e9;
     ST() {
         memset(T, 0, sizeof T);

@@ -7,9 +7,9 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 1e5 + 8, M = 1e9 + 7;
-vector<int> G[N];
-int Ans[N][2], Ways[N][2];
+const int nn = 1e5 + 8, M = 1e9 + 7;
+vector<int> G[nn];
+int Ans[nn][2], Ways[nn][2];
 
 int ways(int u, int p, bool last_black) {
     if (Ans[u][last_black] != -1) {

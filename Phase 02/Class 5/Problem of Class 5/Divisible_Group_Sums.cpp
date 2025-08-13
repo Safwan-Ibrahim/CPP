@@ -7,9 +7,9 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 205, MT = 15, MD = 25;
-int n, m, q, d, A[N];
-ll Ans[N][MT][MD];
+const int nn = 205, MT = 15, MD = 25;
+int n, m, q, d, A[nn];
+ll Ans[nn][MT][MD];
 
 ll ways(int id, int taken, int sum) {
     if (taken > m) {

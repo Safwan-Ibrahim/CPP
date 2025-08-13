@@ -7,8 +7,8 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 5e4;
-int L[N], R[N], Q[N], Ans[N * 3];
+const int nn = 5e4;
+int L[nn], R[nn], Q[nn], Ans[nn * 3];
 
 void solve() {
     int n, q; cin >> n >> q;

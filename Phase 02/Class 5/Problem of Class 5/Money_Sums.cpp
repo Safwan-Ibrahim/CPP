@@ -7,9 +7,9 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 105;
-int n, A[N];
-bool Vs[N][100005];
+const int nn = 105;
+int n, A[nn];
+bool Vs[nn][100005];
 set<int>St;
 
 void go(int i, int sum) {

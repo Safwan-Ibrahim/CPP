@@ -35,8 +35,8 @@ void Try() {
         cin >> B[i];
     }
 
-    vector<int>C = vector<int> (A + 1, A + n + 1);
-    vector<int>D = vector<int> (B + 1, B + n + 1);
+    vector<int> C(A + 1, A + n + 1);
+    vector<int> D(B + 1, B + n + 1);
     sort(C.begin(), C.end()), sort(D.begin(), D.end());
 
     int ans = 1;

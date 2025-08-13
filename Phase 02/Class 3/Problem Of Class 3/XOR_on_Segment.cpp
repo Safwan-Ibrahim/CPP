@@ -7,8 +7,8 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 1e5 + 9;
-int A[N], n;
+const int nn = 1e5 + 9;
+int A[nn], n;
 
 struct bits {
     int Cnt[21];
@@ -20,8 +20,8 @@ struct bits {
 struct STL {
     #define lc (node << 1)
     #define rc ((node << 1) + 1)
-    int Lazy[4 * N];
-    bits T[4 * N];
+    int Lazy[4 * nn];
+    bits T[4 * nn];
     STL() {
         memset(Lazy, 0, sizeof Lazy);
     }

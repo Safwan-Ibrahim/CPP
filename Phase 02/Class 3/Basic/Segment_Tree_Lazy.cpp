@@ -1,13 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const int N = 5e5 + 9;
-int a[N];
+const int nn = 5e5 + 9;
+int a[nn];
 
 struct STL {
     #define lc (n << 1)
     #define rc ((n << 1) + 1)
-    long long t[4 * N], lazy[4 * N];
+    long long t[4 * nn], lazy[4 * nn];
     STL() {
         memset(t, 0, sizeof t);
         memset(lazy, 0, sizeof lazy);

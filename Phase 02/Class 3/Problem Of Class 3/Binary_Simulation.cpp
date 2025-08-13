@@ -7,9 +7,9 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 1e5 + 9;
-char A[N], T[N * 4];
-int Flip[N * 4];
+const int nn = 1e5 + 9;
+char A[nn], T[nn * 4];
+int Flip[nn * 4];
 
 void push(int node, int b, int e) {
     if (Flip[node] == 0) {

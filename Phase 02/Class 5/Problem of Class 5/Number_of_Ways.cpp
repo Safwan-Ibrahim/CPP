@@ -7,9 +7,9 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 5e5 + 8;
-int n, A[N];
-ll Pref[N];
+const int nn = 5e5 + 8;
+int n, A[nn];
+ll Pref[nn];
 
 int32_t main() {
     ios_base::sync_with_stdio(0);cin.tie(0);

@@ -7,8 +7,8 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 5e4;
-int L[N], R[N], Q[N], A[N * 3];
+const int nn = 5e4;
+int L[nn], R[nn], Q[nn], A[nn * 3];
 
 int32_t main() {
     ios_base::sync_with_stdio(0);cin.tie(0);

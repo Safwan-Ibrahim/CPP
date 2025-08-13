@@ -11,9 +11,9 @@ struct mp {
     int mn, cnt;
 };
 
-const int N = 1e5 + 7, inf = 1e9 + 10;
-int A[N];
-mp T[N * 4];
+const int nn = 1e5 + 7, inf = 1e9 + 10;
+int A[nn];
+mp T[nn * 4];
 
 mp merge(mp l, mp r) {
     mp ans;

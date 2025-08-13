@@ -7,9 +7,9 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 1005;
+const int nn = 1005;
 string S, T; 
-int Ans[N][N];
+int Ans[nn][nn];
 
 int lps(int i, int j) {
     if (j == i) {

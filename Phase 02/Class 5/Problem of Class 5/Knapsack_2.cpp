@@ -7,19 +7,16 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 105, C = 1e5 + 8;
+const int nn = 105, C = 1e5 + 8;
 const ll inf = 1e15;
-int n, w, V[N], W[N];
-ll Ans[N][C];
+int n, w, V[nn], W[nn];
+ll Ans[nn][C];
 
 ll min_weight(int i, int total) {
     if (i == n + 1) {
-        if (total == 0) {
-            return 0;
-        }
-        return inf;
+        return (total == 0 ? 0 : inf);
     }
-    if (Ans[i][total] != -1) {
+    if (Ans[i][total] != -1) { 
         return Ans[i][total];
     }
     ll ans = min_weight(i + 1, total);
@@ -53,7 +50,7 @@ int max_value_it() {
 
 int32_t main() {
     ios_base::sync_with_stdio(0);cin.tie(0);
-    
+
     cin >> n >> w;
     for (int i = 1; i <= n; i++) {
         cin >> W[i] >> V[i];
@@ -69,6 +66,5 @@ int32_t main() {
     //cout << mx << endl;
 
     cout << max_value_it() << endl;
-    
     return 0;
 } 

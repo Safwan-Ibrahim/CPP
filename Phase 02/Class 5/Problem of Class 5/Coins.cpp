@@ -7,9 +7,9 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 3e3 + 8;
-double A[N], Ans[N][N];
-bool Vs[N][N];
+const int nn = 3e3 + 8;
+double A[nn], Ans[nn][nn];
+bool Vs[nn][nn];
 int n;
 
 double pro(int i, int head) {

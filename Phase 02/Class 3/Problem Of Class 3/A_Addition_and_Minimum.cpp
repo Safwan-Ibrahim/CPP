@@ -7,14 +7,14 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 1e5 + 9;
-int A[N];
+const int nn = 1e5 + 9;
+int A[nn];
 const ll inf = 1e18;
 
 struct STL {
     #define lc (node << 1)
     #define rc ((node << 1) + 1)
-    long long T[4 * N], Lazy[4 * N];
+    long long T[4 * nn], Lazy[4 * nn];
     STL() {
         memset(T, 0, sizeof T);
         memset(Lazy, 0, sizeof Lazy);

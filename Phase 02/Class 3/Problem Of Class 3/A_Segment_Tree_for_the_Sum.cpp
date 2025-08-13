@@ -7,11 +7,11 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 1e5 + 9;
-int A[N];
+const int nn = 1e5 + 9;
+int A[nn];
 
 struct ST {
-    ll T[4 * N];
+    ll T[4 * nn];
     static const int inf = 1e9;
     ST() {
         memset(T, 0, sizeof T);

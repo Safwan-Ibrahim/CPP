@@ -7,8 +7,8 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 105, inf = 1e9;
-int n, Pref[N], Ans[N][N];
+const int nn = 105, inf = 1e9;
+int n, Pref[nn], Ans[nn][nn];
 
 int min_cost(int l, int r) {
     if (l == r) {

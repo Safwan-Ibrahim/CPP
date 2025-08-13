@@ -7,9 +7,9 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 105;
-int n, w, V[N], W[N];
-ll Ans[N][100005];
+const int nn = 105;
+int n, w, V[nn], W[nn];
+ll Ans[nn][100005];
 
 ll max_value(int i, int sum) {
     if (i == n + 1) {

@@ -7,9 +7,9 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 1e5 + 8;
-vector<int>G[N];
-int Ans[N];
+const int nn = 1e5 + 8;
+vector<int>G[nn];
+int Ans[nn];
 
 int max_path(int u) {
     if (Ans[u] != -1) {

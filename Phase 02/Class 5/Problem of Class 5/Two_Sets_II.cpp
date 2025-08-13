@@ -7,8 +7,8 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 505, M = 1e9 + 7;
-int n, need, Ans[N][N * N];
+const int nn = 505, M = 1e9 + 7;
+int n, need, Ans[nn][nn * nn];
 
 
 int power(int x, int n, int m) {

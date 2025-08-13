@@ -7,8 +7,8 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 105, M = 1e9 + 7;
-int n, k, A[N];
+const int nn = 105, M = 1e9 + 7;
+int n, k, A[nn];
 
 // int way(int id, int need_to_take) {
 //     if (id == n + 1) {

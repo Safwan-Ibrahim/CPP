@@ -7,8 +7,8 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int inf = 2e9, N = 1e6 + 8;
-int Ans[N];
+const int inf = 2e9, nn = 1e6 + 8;
+int Ans[nn];
 
 int mx(int x) {
     int mx = 1;

@@ -7,12 +7,12 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 1e5 + 9, M = 1e9 + 7;
+const int nn = 1e5 + 9, M = 1e9 + 7;
 
 struct STL {
     #define lc (node << 1)
     #define rc ((node << 1) + 1)
-    int T[4 * N], lazy[4 * N];
+    int T[4 * nn], lazy[4 * nn];
     STL() {
         memset(T, 0, sizeof T);
         memset(lazy, 0, sizeof lazy);

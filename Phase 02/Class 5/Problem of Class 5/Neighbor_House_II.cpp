@@ -7,9 +7,9 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-const int N = 1005;
-int n, A[N];
-int Ans[N][2];
+const int nn = 1005;
+int n, A[nn];
+int Ans[nn][2];
 
 int max_sell(int id, bool taken) {
     if (id == n) {
