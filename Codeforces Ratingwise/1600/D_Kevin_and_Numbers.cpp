@@ -8,7 +8,7 @@ using namespace std;
 #define endl '\n'
 
 const int nn = 2e5 + 17;
-int pn, tn;
+int n, tn;
 multiset<int>A, B;
 
 bool have(int x) {
@@ -27,9 +27,9 @@ bool have(int x) {
 }
 
 void Try() {
-    cin >> pn >> tn;
+    cin >> n >> tn;
     A.clear(), B.clear();
-    for (int i = 1; i <= pn; i++) {
+    for (int i = 1; i <= n; i++) {
         int x; cin >> x;
         A.insert(x);
     }

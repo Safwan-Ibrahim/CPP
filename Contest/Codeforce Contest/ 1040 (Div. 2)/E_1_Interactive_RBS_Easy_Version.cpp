@@ -31,8 +31,8 @@ int query2(int l, int r, int i, int j) {
 
 void Try() {
     int n; cin >> n;
-    int lo = 1, hi = n;
-    int a, b, c; 
+    
+    int lo = 1, hi = n, a, b, c; 
     while(hi - lo > 1) {
         int mid = (hi + lo) / 2;
         a = query1(lo, mid); 
@@ -49,6 +49,7 @@ void Try() {
 
     cout << "? 3 " << lo << " " << hi << " " << hi << endl;
     cout.flush();
+    
     int not_swap; cin >> not_swap;
     if (!not_swap) {
         swap(lo, hi);

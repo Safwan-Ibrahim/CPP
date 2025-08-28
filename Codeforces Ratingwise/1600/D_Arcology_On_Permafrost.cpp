@@ -8,12 +8,12 @@ using namespace std;
 #define endl '\n'
 
 const int nn = 2e5 + 18;
-int pn, tn, k, A[nn];
+int n, tn, k, A[nn];
 
 void Try() {
-    cin >> pn >> tn >> k;
-    for (int i = 1; i <= pn; i++) {
-        cout << (i - 1) % (pn - tn * k <= pn / (tn + 1) ? k : pn / (tn + 1)) << " ";
+    cin >> n >> tn >> k;
+    for (int i = 1; i <= n; i++) {
+        cout << (i - 1) % (n - tn * k <= n / (tn + 1) ? k : n / (tn + 1)) << " ";
     }
     cout << endl;
 }

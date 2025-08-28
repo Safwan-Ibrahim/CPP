@@ -8,17 +8,17 @@ using namespace std;
 #define endl '\n'
 
 const int nn = 307;
-int pn, A[nn][nn];
+int n, A[nn][nn];
 
 void Try() {
-    cin >> pn; 
+    cin >> n; 
     multiset<int>Ms;
-    for (int i = 1; i <= pn; i++) {
-        for (int j = 1; j <= pn; j++) {
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n; j++) {
             cin >> A[i][j];
         }
         int cnt = 0;
-        for (int j = pn; j >= 1; j--) {
+        for (int j = n; j >= 1; j--) {
             if (A[i][j] != 1) break;
             cnt++;
         } 
@@ -26,7 +26,7 @@ void Try() {
     } 
     
     int ans = 1;
-    for (int i = 1; i <= pn - 1; i++) {
+    for (int i = 1; i <= n - 1; i++) {
         while(Ms.size() && *Ms.begin() < i) Ms.erase(Ms.begin());
         if (Ms.empty()) break;
         Ms.erase(Ms.begin());

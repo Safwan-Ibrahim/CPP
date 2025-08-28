@@ -13,7 +13,7 @@ bool cmp(pair<int, int>a, pair<int, int>b) {
 
 void Try() {
     int n, k; cin >> n >> k;
-    vector<pair<int, int>>V;
+
     int A[n + 1], B[n + 1];
     for (int i = 1; i <= n; i++) {
         cin >> A[i];
@@ -21,9 +21,10 @@ void Try() {
     for (int i = 1; i <= n; i++) {
         cin >> B[i];
     }
-
-    ll ans = 0;
+    
+    vector<pair<int, int>>V;
     map<int, ll>Dif;
+    ll ans = 0;
     for (int i = 1; i <= n; i++) {
         ans += abs(A[i] - B[i]);
         if (A[i] > B[i]) swap(A[i], B[i]);
@@ -42,7 +43,9 @@ void Try() {
             cout << ans << endl; return;
         }
     }
+
     sort(V.begin(), V.end(), cmp);
+    
     ll mn = 1e18;
     for (int i = 0; i + 1 < V.size(); i++) {
         ll cur = V[i].second - V[i].first + V[i + 1].second - V[i + 1].first;

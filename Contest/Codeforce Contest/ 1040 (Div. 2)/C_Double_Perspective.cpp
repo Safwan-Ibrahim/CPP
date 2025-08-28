@@ -9,6 +9,7 @@ using namespace std;
 
 void Try() {
     int n; cin >> n;
+    
     array<int, 3> A[n + 1];
     for (int i = 1; i <= n; i++) {
         int a, b; cin >> a >> b;

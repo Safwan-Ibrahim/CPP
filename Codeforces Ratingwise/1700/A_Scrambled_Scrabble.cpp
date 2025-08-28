@@ -26,7 +26,6 @@ int32_t main() {
         else c++;
     }
     
-    
     if (n < g) swap(n, g);
     c += n + g;
     int ans = 0;

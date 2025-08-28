@@ -8,21 +8,21 @@ using namespace std;
 #define endl '\n'
 
 const int nn = 1e5 + 17;
-int pn, A[nn];
+int n, A[nn];
 
 void Try() {
-    cin >> pn;
-    for (int i = 1; i <= pn; i++) {
+    cin >> n;
+    for (int i = 1; i <= n; i++) {
         cin >> A[i];
     }
-    vector<bool>Done(pn + 1, false);
+    vector<bool>Done(n + 1, false);
     multiset<int>Ms;
-    for (int i = 1; i <= pn; i++) {
+    for (int i = 1; i <= n; i++) {
         Ms.insert(A[i]);
     }
     
     Ms.insert(2e9);
-    for (int i = 1; i <= pn; i++) {
+    for (int i = 1; i <= n; i++) {
         Ms.erase(Ms.find(A[i]));
         if (*Ms.begin() < A[i]) {
             Done[i] = true;
@@ -31,7 +31,7 @@ void Try() {
     }
     
     int min_left = 2e9;
-    for (int i = 1; i <= pn; i++) {
+    for (int i = 1; i <= n; i++) {
         if (!Done[i] && min_left < A[i] - 1) {
             A[i]++;
         }
@@ -40,8 +40,8 @@ void Try() {
         }
     }
     
-    sort(A + 1, A + pn + 1);
-    for (int i = 1; i <= pn; i++) {
+    sort(A + 1, A + n + 1);
+    for (int i = 1; i <= n; i++) {
         cout << A[i] << " ";
     }
     cout << endl;

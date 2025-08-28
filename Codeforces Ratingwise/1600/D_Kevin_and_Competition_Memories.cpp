@@ -9,11 +9,11 @@ using namespace std;
 
 const int nn = 3e5 + 17;
 vector<int>A, B;
-int pn, tn;
+int n, tn;
 
 void Try() {
-    cin >> pn >> tn;
-    A.resize(pn); B.resize(tn);
+    cin >> n >> tn;
+    A.resize(n); B.resize(tn);
     for (auto &x : A) {
         cin >> x;
     }

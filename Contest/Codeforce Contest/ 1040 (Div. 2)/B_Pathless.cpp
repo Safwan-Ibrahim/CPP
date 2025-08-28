@@ -9,16 +9,16 @@ using namespace std;
 
 void Try() {
     int n, s; cin >> n >> s;
-    int sum = 0;
-    int A[n + 1];
+
+    int sum = 0, cnt = 0, A[n + 1];
     vector<int>V;
-    int cnt = 0;
     for (int i = 1; i <= n; i++) {
         cin >> A[i];
         sum += A[i];
         if (A[i] != 0) V.push_back(A[i]);
         else cnt++;
     }
+
     if (sum == s || sum + 1 < s) {
         cout << -1 << endl; return;
     }
@@ -31,7 +31,6 @@ void Try() {
         cout << x << " ";
     }
     cout << endl;
-    
 }
 
 int32_t main() {

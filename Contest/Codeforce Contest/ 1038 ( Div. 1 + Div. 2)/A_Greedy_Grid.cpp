@@ -9,6 +9,7 @@ using namespace std;
 
 void Try() {
     int n; cin >> n;
+
     vector<array<int, 4>>V;
     int a, b, c, d; 
     for (int i = 1; i <= n; i++) {
@@ -20,7 +21,6 @@ void Try() {
             V.push_back({a, a - c, b, b - d});
         }
     }
-
 
     int ans = 0;
     vector<pair<int, int>>A;
@@ -41,7 +41,6 @@ void Try() {
     }
 
     cout << ans << endl;
-    
 }
 
 int32_t main() {

@@ -9,7 +9,7 @@ using namespace std;
 
 const int nn = 3e5 + 17, mod = 998244353;
 vector<int> G[nn];
-int pn, mx, Dept[nn], Ans[nn];
+int n, mx, Dept[nn], Ans[nn];
 
 void dfs(int u) {
     mx = max(mx, Dept[u]);
@@ -20,15 +20,15 @@ void dfs(int u) {
 }
 
 void Try() {
-    cin >> pn;
-    for (int i = 2; i <= pn; i++) {
+    cin >> n;
+    for (int i = 2; i <= n; i++) {
         int u; cin >> u;
         G[u].push_back(i);
     }
 
     dfs(1);
     vector<vector<int>>V(mx + 1);
-    for (int i = 1; i <= pn; i++) {
+    for (int i = 1; i <= n; i++) {
         V[Dept[i]].push_back(i);
     }
     
@@ -54,7 +54,7 @@ void Try() {
     cout << Ans[1] << endl;
     
     mx = 0;
-    for (int i = 1; i <= pn; i++) {
+    for (int i = 1; i <= n; i++) {
         G[i].clear();
         Dept[i] = Ans[i] = 0;
     }

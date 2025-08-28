@@ -67,6 +67,7 @@ void dfs(int u, int p) {
 
 void Try() { 
     cin >> n >> m;
+    
     for (int i = 1; i <= m; i++) {
         int u, v; cin >> u >> v;
         G[u].push_back(v);

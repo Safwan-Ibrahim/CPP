@@ -9,6 +9,7 @@ using namespace std;
 
 void Try() {
     int n; cin >> n;
+    
     vector<int>Ans;
     for (int i = 1; i <= n; i++) {
         if (i & 1) {
@@ -16,17 +17,15 @@ void Try() {
         }
         else Ans.push_back(3);
     }
-    
+
     if (n % 2 == 0) {
-        Ans.pop_back();
-        Ans.push_back(2);
+        Ans.back() = 2;
     }
 
     for (auto x : Ans) {
         cout << x << " ";
     }
     cout << endl;
-    
 }
 
 int32_t main() {

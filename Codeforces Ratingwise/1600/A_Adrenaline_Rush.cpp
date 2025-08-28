@@ -8,19 +8,21 @@ using namespace std;
 #define endl '\n'
 
 const int nn = 1007;
-int pn, Final[nn], Position[nn], Index_of_pos[nn];
+int n, Final[nn], Position[nn], Index_of_pos[nn];
 
 int32_t main() {
     ios_base::sync_with_stdio(0);cin.tie(0);
-    cin >> pn;
-    for (int i = 1; i <= pn; i++) {
+
+    cin >> n;
+
+    for (int i = 1; i <= n; i++) {
         cin >> Final[i];
         Position[i] = i;
         Index_of_pos[Position[i]] = i;
     }
 
     vector<int>Ans;
-    for (int last = pn; last >= 1; last--) {
+    for (int last = n; last >= 1; last--) {
         int id_of_last = Index_of_pos[Final[last]];
         for (int i = id_of_last - 1; i >= 1; i--) {
             Ans.push_back(Final[last]);

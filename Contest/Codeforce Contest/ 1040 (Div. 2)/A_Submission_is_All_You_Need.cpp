@@ -9,11 +9,13 @@ using namespace std;
 
 void Try() {
     int n; cin >> n;
+
     int sum = 0;
     for (int i = 1; i <= n; i++) {
         int x; cin >> x;
         sum += max(1, x);
     }
+    
     cout << sum << endl;
 }
  

@@ -8,26 +8,26 @@ using namespace std;
 #define endl '\n'
 
 const int nn = 2e5 + 17;
-int pn, k, A[nn];
+int n, k, A[nn];
 
 void Try() {
-    cin >> pn >> k;
-    for (int i = 1; i <= pn; i++) {
+    cin >> n >> k;
+    for (int i = 1; i <= n; i++) {
         cin >> A[i];
     }
     A[1] += k;
 
-    vector<ll>Ps(pn + 2, 0);
-    for (int i = 1; i <= pn; i++) {
+    vector<ll>Ps(n + 2, 0);
+    for (int i = 1; i <= n; i++) {
         Ps[i] = Ps[i - 1] + A[i];
     }
     
     multiset<int>L, R;
-    for (int i = 1; i <= pn; i++) {
+    for (int i = 1; i <= n; i++) {
         R.insert(A[i]);
     }
 
-    for (int i = 1; i <= pn; i++) {
+    for (int i = 1; i <= n; i++) {
         R.erase(R.find(A[i]));
         auto rit = R.upper_bound(A[i]);
         auto lit = L.lower_bound(A[i]);

@@ -9,6 +9,7 @@ using namespace std;
 
 void Try() {
     int n, k; cin >> n >> k;
+    
     multiset<int>S, T;
     for (int i = 1; i <= n; i++) {
         int x; cin >> x; x %= k;

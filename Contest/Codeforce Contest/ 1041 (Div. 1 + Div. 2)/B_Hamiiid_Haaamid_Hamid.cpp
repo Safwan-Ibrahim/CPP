@@ -9,6 +9,7 @@ using namespace std;
 
 void Try() {
     int n, pos; cin >> n >> pos;
+
     char S[n + 5];
     int l = 0, r = 0;
     for (int i = 1; i <= n; i++) {
@@ -33,7 +34,6 @@ void Try() {
     b = min(n + 1 - r, pos - 1);
     int ans = max(a, b);
     cout << ans + 1 << endl;
-
 }
 
 int32_t main() {

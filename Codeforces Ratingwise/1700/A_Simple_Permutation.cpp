@@ -54,7 +54,7 @@ void Try() {
     cin >> n;
     int id = upper_bound(prm.begin(), prm.end(), n / 2) - prm.begin();
     int cnt = 0; ll sum = 0;
-    vector<int> Ans = print(prm[id]);
+    vector<int>Ans = print(prm[id]);
     for (int i = 0; i < Ans.size(); i++) {
         sum += Ans[i];
         cnt += ((sum + i) / (i + 1)) == prm[id];

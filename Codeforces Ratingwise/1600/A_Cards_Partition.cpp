@@ -9,7 +9,7 @@ using namespace std;
 
 const int nn = 2e5 + 17;
 ll A[nn], k, mx, sum;
-int pn;
+int n;
 
 bool ok(int x) {
     ll need = (sum + x - 1) / x;
@@ -18,17 +18,17 @@ bool ok(int x) {
 }
 
 void Try() {
-    cin >> pn >> k;
-    for (int i = 1; i <= pn; i++) {
+    cin >> n >> k;
+    for (int i = 1; i <= n; i++) {
         cin >> A[i];
     }
     sum = 0, mx = 0;
-    for (int i = 1; i <= pn; i++) {
+    for (int i = 1; i <= n; i++) {
         sum += A[i];
         mx = max(mx, A[i]);
     }
 
-    for (int i = pn; i >= 1; i--) {
+    for (int i = n; i >= 1; i--) {
         if ((i - sum % i) % i <= k && ok(i)) {
             cout << i << endl; return;
         }

@@ -7,8 +7,8 @@ using namespace std;
 #define ll long long
 #define endl '\n'
 
-ll get_inversion(vector<int>A) {
-    ll ans = 0;
+int get_inversion(vector<int>A) {
+    int ans = 0;
     for (int i = 0; i < A.size(); i++) {
         for (int j = i + 1; j < A.size(); j++) {
             ans += A[i] > A[j];
@@ -19,6 +19,7 @@ ll get_inversion(vector<int>A) {
 
 void Try() {
     int n; cin >> n;
+    
     vector<int>A(n), O(n + 1);
     for (int i = 0; i < n; i++) {
         cin >> A[i];

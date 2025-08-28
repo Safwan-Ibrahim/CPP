@@ -9,11 +9,11 @@ using namespace std;
 
 const int nn = 2e5 + 18;
 set<int> G[nn];
-int pn;
+int n;
 
 void Try() {
-    cin >> pn;
-    for (int i = 1; i < pn; i++) {
+    cin >> n;
+    for (int i = 1; i < n; i++) {
         int u, v; cin >> u >> v;
         G[u].insert(v);
         G[v].insert(u);
@@ -21,13 +21,13 @@ void Try() {
 
     multiset<int>Ms; Ms.insert(0);
 
-    for (int i = 1; i <= pn; i++) {
+    for (int i = 1; i <= n; i++) {
         Ms.insert(G[i].size() + 1);
     }
 
     int mx = 0;
     multiset<int>Tmp;
-    for (int i = 1; i <= pn; i++) {
+    for (int i = 1; i <= n; i++) {
         int current = G[i].size() + 1;
         Ms.erase(Ms.find(current));
         for (auto v : G[i]) {
@@ -44,7 +44,7 @@ void Try() {
 
     cout << mx - 3 << endl;
 
-    for (int i = 1; i <= pn; i++) {
+    for (int i = 1; i <= n; i++) {
         G[i].clear();
     }
 }

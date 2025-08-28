@@ -9,6 +9,7 @@ using namespace std;
 
 void Try() {
     int n; cin >> n;
+
     vector<int>A;
     for (int i = 1; i <= n; i++) {
         int x; cin >> x;
@@ -18,11 +19,11 @@ void Try() {
     }
 
     sort(A.begin(), A.end());
+    
     if (A.size() && A.front() == 0 || A.size() && A.front() != A.back()) {
         cout << "NO\n";
     }
     else cout << "YES\n";
-    
 }
 
 int32_t main() {

@@ -20,12 +20,14 @@ bool cmp2(array<int, 3>a, array<int, 3>b) {
 
 void Try() {
     cin >> n;
+    
     for (int i = 1; i <= n; i++) {
         int x, y; cin >> x >> y;
         A[i] = {x, y, i};
     }
 
     sort(A + 1, A + n + 1); sort(A + 1, A + n / 2 + 1, cmp1); sort(A + n / 2 + 1, A + n + 1, cmp2);
+
     for (int i = 1; i <= n / 2; i++) {
         cout << A[i][2] << " " << A[i + n / 2][2] << endl;
     }

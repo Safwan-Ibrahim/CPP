@@ -9,6 +9,7 @@ using namespace std;
 
 void Try() {
     int n; cin >> n;
+
     int A[n + 1], B[n + 1];
     for (int i = 1; i <= n; i++) {
         cin >> A[i];
@@ -21,6 +22,7 @@ void Try() {
     for (int i = 1; i <= n; i++) {
         ans += max(0, A[i] - B[i]);
     }
+    
     cout << ans << endl;
 }
 
