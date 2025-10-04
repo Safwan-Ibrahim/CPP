@@ -11,34 +11,20 @@ int32_t main() {
     ios_base::sync_with_stdio(0);cin.tie(0);
     
     int n; cin >> n;
-    int A[n + 1];
 
-    for (int i = 1; i <= n; i++) {
-        cin >> A[i];
-    }
+    int cnt = 0;
+    int mx = (1 << (31 - __builtin_clz(n - 1) + 1)) - 1;
+    for (int i = 0; i < n; i++) {
 
-    vector<vector<int>>SS;
-    SS.push_back({});
-
-    for (int i = 1; i <= n; i++) {
-        vector<int>Tmp;
-        vector<vector<int>>Stmp;
-        for (auto V : SS) {
-            Tmp = V;
-            Tmp.push_back(A[i]);
-            Stmp.push_back(Tmp);
-        }
-        for (auto Tmp : Stmp) {
-            SS.push_back(Tmp);
+        for (int j = 0; j < n; j++) {
+            if ((j ^ i) == mx || (j | i) == mx) {
+                cout << i << " " << j << " " << (j | i) << " " << (j ^ i) << endl;
+                cnt++;
+            }
         }
     }
 
-    for (auto V : SS) {
-        for (auto x : V) {
-            cout << x << " ";
-        }
-        cout << endl;
-    }
+    cerr << cnt << endl;
     
     return 0;
 } 

@@ -24,7 +24,8 @@ void Try() {
         cin >> B[i];
     }
 
-    sort(A + 1, A + n + 1, greater<int>()); sort(B + 1, B + m + 1, greater<int>());
+    sort(A + 1, A + n + 1, greater<int>()); 
+    sort(B + 1, B + m + 1, greater<int>());
 
     for (int i = 1; i <= n; i++) {
         PA[i] = PA[i - 1] + A[i];

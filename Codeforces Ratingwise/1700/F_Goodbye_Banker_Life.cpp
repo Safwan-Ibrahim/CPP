@@ -33,7 +33,9 @@ vector<int> Rec(int x) {
 
 void Try() {
     cin >> n >> k;
+
     vector<int>Ans = Rec(n);
+    
     for (auto x : Ans) {
         cout << (x ? k : 0) << " ";
     }

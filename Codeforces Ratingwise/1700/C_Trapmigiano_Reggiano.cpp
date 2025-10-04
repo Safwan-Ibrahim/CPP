@@ -32,13 +32,16 @@ void dfs2(int u) {
 
 void Try() {
     cin >> n >> st >> en;
+
     for (int i = 1; i < n; i++) {
         int u, v; cin >> u >> v;
         G[u].push_back(v);
         G[v].push_back(u);
     }
+
     dfs1(en, 0);
-    while(st != 0) {
+
+    while (st != 0) {
         dfs2(st);
         Mt[P[st]].erase(st);
         st = P[st];

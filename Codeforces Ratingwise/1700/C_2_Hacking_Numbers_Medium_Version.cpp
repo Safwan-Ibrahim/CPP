@@ -8,16 +8,21 @@ using namespace std;
 
 void Try() {
     int n; cin >> n;
+
     int ans;
+
     cout << "mul 999999999" << endl;
     cin >> ans;
+
     cout << "digit" << endl;
     cin >> ans;
+
     if (n != 81) {
         cout << "add " << n - 81 << endl;
         cin >> ans;
     }
-    cout << "!" << endl;
+
+    cout << "! " << endl;
     cin >> ans;
 }
 

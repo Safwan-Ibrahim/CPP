@@ -1,0 +1,1 @@
+{"name":"Local: rough","url":"/Users/safwan/Documents/CPP/Contest/LU Intra/rough.cpp","tests":[{"id":1756742624627,"input":"abcfbc         abfcab\nprogramming    contest \nabcd           mnp","output":"72 \n514"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/safwan/Documents/CPP/Contest/LU Intra/rough.cpp","group":"local","local":true}
