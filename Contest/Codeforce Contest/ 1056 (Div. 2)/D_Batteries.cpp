@@ -10,14 +10,14 @@ void Try() {
     int n; cin >> n;
 
     int x = 0;
-    for (int i = 1; !x && i < n; i++) {
-        for (int j = i + 1; !x && j <= n; j++) {
-            cout << i << " " << j << endl;
-            cin >> x;
+    for (int dis = 1; !x && dis < n; dis++) {
+        for (int i = 1; !x && i <= n; i++) {
+            int j = i + dis - n * (i + dis > n); 
+            cout << i << " " << j << endl; cin >> x;
         }
     }
     
-}
+} 
 
 int32_t main() {
 

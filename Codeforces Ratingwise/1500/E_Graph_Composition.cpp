@@ -13,7 +13,7 @@ const int nn = 2e5 + 17;
 set<int> G[nn], F[nn];
 
 int cnt;
-vector<int>Com;
+vector<int> Com;
 
 void dfs(int u) {
     Com[u] = cnt;

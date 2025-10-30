@@ -23,6 +23,7 @@ void Try() {
     int sum = 0, mn = n;
     map<int, int> Mp;
     Mp[0] = 0;
+    
     for (int i = 1; i <= n; i++) {
         sum += A[i];
         Mp[sum] = i;

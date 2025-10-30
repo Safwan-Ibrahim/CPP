@@ -10,6 +10,7 @@ using namespace std;
 void Try() {
     int n, k; cin >> n >> k;
     int A[n + 8];
+    
     memset(A, 0, sizeof A);
     vector<int>T;
     for (int i = 1; i <= k; i++) {
@@ -22,14 +23,14 @@ void Try() {
         A[T[i]] = x;
     }
 
-    multiset<int>R;
+    multiset<int> R;
     for (int i = 1; i <= n; i++) {
         if (A[i] != 0) {
             R.insert(A[i] + i);
         }
     }
 
-    multiset<int>L;
+    multiset<int> L;
     for (int i = 1; i <= n; i++) {
         int ans = 2e9 + 9;
         if (!R.empty()) {

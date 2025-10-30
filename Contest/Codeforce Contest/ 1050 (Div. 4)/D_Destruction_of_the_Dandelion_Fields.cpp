@@ -3,6 +3,7 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+#include <cstdio>
 
 #define ll long long
 #define endl '\n'
