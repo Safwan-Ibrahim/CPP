@@ -1,6 +1,6 @@
 // Created on: 2025-04-21 03:53
 // Author: Safwan_Ibrahim
-    
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -20,8 +20,6 @@ int32_t main() {
             C[i][k] = (C[i - 1][k - 1] + C[i - 1][k]) % mod;
         }    
     }
-    
-    
-    
+
     return 0;
 } 
